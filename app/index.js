@@ -1,4 +1,10 @@
 // index.js
+
+//Mobile App Devt (CIT2269) Assignment 1
+//author: Razel Ventura, s0541328
+//brief: The index page shows a link to the instructions on how to play madlibs.
+    //It also contains the hints for the text.There are two buttons: one to generate the hall pass and another to clear the fields.
+
 import React from 'react';
 import { Pressable, Text, TextInput, View } from 'react-native';
 import { Link } from 'expo-router';
@@ -15,6 +21,8 @@ export default function Page() {
         setEvent("");
     };
 
+    const hintMadlibsInstruction = 'How to Play Mad Libs \n';
+
     return (
         <View style={Styles.container}>
             <View style={Styles.headerAssignment}>
@@ -23,8 +31,7 @@ export default function Page() {
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Link href="/page3">
                     <Text style={Styles.linkText}>
-                        How to Play Mad Libs
-                        {"\n" }
+                        {hintMadlibsInstruction}
                     </Text>
                 </Link>
                 <Text style={{ fontSize: 22, fontWeight: 'bold', marginBottom: 20 }}>Hall Pass</Text>
@@ -46,15 +53,8 @@ export default function Page() {
                     value={event}
                     placeholder="An Event"
                 />
-                <Link
-                    style={Styles.button}
-                    href={{
-                        pathname: "/page2",
-                        params: { name, noun, event }
-                    }} asChild>
-                    <Pressable>
-                        <Text>Make my hall pass</Text>
-                    </Pressable>
+                <Link style={Styles.button} href={{ pathname: "/page2", params: { name, noun, event } }}>
+                    <Text style={Styles.buttonText}>Make my hall pass</Text>
                 </Link>
                 <Pressable style={Styles.button} onPress={clearFields}>
                     <Text>Clear</Text>

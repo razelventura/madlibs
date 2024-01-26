@@ -1,3 +1,9 @@
+//page-styles.js
+
+//Mobile App Devt (CIT2269) Assignment 1
+//author: Razel Ventura, s0541328
+//brief: This file contains most of the styling used in index.js, page2.js, and page3.js
+
 import { StyleSheet, Dimensions } from 'react-native';
 
 const screenWidth = Dimensions.get('window').width;
@@ -9,33 +15,27 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     headerAssignment: {
-        width: screenWidth, // Full width
-        height: screenHeight * 0.1, // 10% of the screen height for a top header
+        width: screenWidth, 
+        height: screenHeight * 0.1, 
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#eee', // Light grey background for the header
-        borderBottomWidth: 1, // Add a bottom border to separate the header
+        backgroundColor: '#eee', 
+        borderBottomWidth: 1, 
         borderColor: 'black',
     },
     headerAssignmentText: {
         fontSize: 24,
         fontWeight: 'bold',
     },
-    formContainer: {
-        flex: 1, // Take up all space after the header
-        alignItems: 'center', // Center children horizontally
-        justifyContent: 'center', // Center children vertically
-        paddingVertical: 20, // Add some vertical padding
-    },
     input: {
         borderWidth: 1,
         borderColor: '#000',
         padding: 10,
         marginVertical: 5,
-        width: '80%', // Input field takes up 80% of the screen width
+        width: '80%', 
     },
     button: {
-        borderRadius: 20, // Make the buttons rounded
+        borderRadius: 20, 
         paddingVertical: 10,
         paddingHorizontal: 30,
         marginVertical: 5,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 16,
-        fontWeight: '500', // Semi-bold
+        fontWeight: '500', 
     },
     linkText: {
         textDecorationLine: 'underline',
@@ -54,24 +54,21 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     header: {
-        height: screenHeight * 0.1, // 10% of the screen height
+        height: screenHeight * 0.1, 
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 10,
-    },
-    backButton: {
-        // Style for your back button
     },
     content: {
         flex: 1,
         flexDirection: 'row',
     },
     hallPassSide: {
-        width: '20%', // 20% of the screen width
+        width: '20%', 
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
-        backgroundColor: '#eee', // Temporary background color for visibility
+        backgroundColor: '#eee',
     },
     hallPassText: {
         width: 400,
@@ -79,14 +76,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         transform: [
             { rotate: '-90deg' },
-            // Assuming the container has enough height,
-            // these values might need to be adjusted to fit your specific UI.
-            { translateY: 0 }, // Adjust this value to align the text as in the image
-            { translateX: 10 }, // Adjust this value as well to center the text
+            { translateY: 0 },
+            { translateX: 10 },
         ],
     },
     madLibsSide: {
-        width: '80%', // 80% of the screen width
+        width: '80%', 
         justifyContent: 'center',
         alignItems: 'flex-start',
         padding: 10,
@@ -99,6 +94,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    hallPassImage: {
+        width: 100, 
+        height: 65,  
+        transform: [
+            { rotate: '-90deg' },
+            { translateY: 0 },
+            { translateX: 180 },
+        ],
+    },
+
 });
 
 export default styles;
